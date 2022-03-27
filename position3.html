@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Position</title>
+  <style>
+*{
+  margin: 0;
+  padding: 0;
+}
+.maindiv{
+  width: 400px;
+  border: 1px solid red;
+  padding: 10px;
+  margin: 30px auto;
+  text-align: center;
+  position: relative;
+}
+.hoverdiv{
+  width: 300px;
+  height: 300px;
+}
+.hoverdiv img{
+  max-width: 100%;
+  
+}
+.innerdiv{
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #fff;
+  text-align: center;
+  width: 0%;
+  height: 0%;
+  background: rgba(223, 154, 154, 0.5);
+  visibility: hidden;
+  transition: .5s;
+  opacity: 0;
+}
+.hoverdiv:hover .innerdiv{
+  width: 100%;
+  height: 100%;
+  visibility: visible;
+  opacity: 1;
+}
+.innerdiv h2{
+  margin-top: 60px;
+font-size: 20px;
+}
+  </style>
+</head>
+<body>
+<div class="maindiv">
+  <div class="hoverdiv">
+    <img src="./f.jpg" alt="">
+    <div class="innerdiv">
+      <h2>Bangladesh</h2>
+      <p>It's Beautiful country</p>
+    </div>
+  </div>
+</div>  
+</body>
+</html>
